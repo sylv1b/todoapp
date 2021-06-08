@@ -39,7 +39,9 @@ class TodoList {
   }
 
   getList() {
-    return this.sortedStoredTodo.map((todo) => new Todo(todo));
+    return !!this.sortedStoredTodo.length
+      ? this.sortedStoredTodo.map((todo) => new Todo(todo))
+      : [];
   }
 
   async add(todo) {
@@ -95,7 +97,10 @@ class TodoList {
   }
 
   async save() {
-    return myStorage.setItem("toDoItems", JSON.stringify(this.storedTodos));
+    return await myStorage.setItem(
+      "toDoItems",
+      JSON.stringify(this.storedTodos)
+    );
   }
 
   async refresh() {
@@ -122,8 +127,7 @@ class TodoList {
   }
 
   async empty() {
-    return await myStorage
-      .setItem("toDoItems", JSON.stringify([]))
-      .then(async () => await this.refresh());
+    await myStorage.setItem("toDoItems", JSON.stringify([]));
+    return await this.refresh();
   }
 }
