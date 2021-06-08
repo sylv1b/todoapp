@@ -104,7 +104,9 @@
       const numberOfTodosContainer = document.getElementById(
         "number-of-todo-items"
       );
-      numberOfTodosContainer.innerHTML = `${todoList.length} items`;
+      numberOfTodosContainer.innerHTML = `${todoList.length} ${
+        todoList.length > 1 ? "items" : "item"
+      }`;
     };
 
     // Save
