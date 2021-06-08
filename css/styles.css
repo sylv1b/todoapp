@@ -1,0 +1,312 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope"),
+    url("https://fonts.cdnfonts.com/s/16243/manrope-regular.woff")
+      format("woff");
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: Manrope;
+}
+.container {
+  margin-top: 38px;
+  margin-right: 4px;
+  margin-left: 4px;
+  width: 100vw;
+  max-width: 477px;
+  text-align: center;
+}
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 395px;
+  margin-left: 36px;
+}
+header img {
+  margin-right: 9px;
+}
+.title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.title {
+  font-size: 28px;
+}
+.caption {
+  font-size: 12px;
+  color: rgba(0, 5, 51, 0.5);
+}
+.todo-item-main-container {
+  position: relative;
+  width: 467px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.todo-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  flex: 1;
+  max-width: 357px;
+  border: 1px solid rgba(232, 236, 238, 1);
+  border-radius: 5px;
+  padding-left: 18px;
+  padding-right: 18px;
+  background-color: rgba(241, 243, 244, 1);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+.fade-in {
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+
+  50% {
+    opacity: 0;
+    height: 70px;
+  }
+  100% {
+    opacity: 1;
+    height: 70;
+  }
+}
+.fade-out {
+  animation: fadeout 2s;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    height: 70;
+    margin-top: 8px;
+  }
+
+  50% {
+    opacity: 0;
+    height: 70px;
+    margin-top: 8px;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    margin-top: 0px;
+  }
+}
+.todo-item-container:hover {
+  background-color: #fafcfd;
+}
+.todo-item-container-done {
+  background-color: initial !important;
+}
+.remove-item-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 32px;
+  left: 448px;
+  width: 16px;
+  height: 16px;
+  visibility: hidden;
+  cursor: pointer;
+}
+.left-spacer {
+  width: 36px;
+}
+.done-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.done-container input {
+  margin-right: 12px;
+}
+.due-date-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.todo-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.tiny-text {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: right;
+}
+.normal-text {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: right;
+}
+.done {
+  text-decoration: line-through;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  margin-top: 34px;
+  background-color: rgba(70, 94, 251, 1);
+  width: 152px;
+  height: 60px;
+  color: rgba(243, 244, 247, 1);
+  border: 1px solid rgba(128, 130, 153, 0.2);
+  border-radius: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  cursor: pointer;
+}
+.form-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.673);
+  margin-right: 48px;
+  z-index: 1000;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(243, 244, 247, 1);
+  width: 100vw;
+  height: 100vh;
+  max-width: 350px;
+  max-height: 450px;
+  margin: 24px, 24px, 24px, 24px;
+  border-radius: 5px;
+  padding: 16px;
+}
+.form-item-container {
+  margin-top: 18px;
+}
+.todo-form-title {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+.text-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 42px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 130, 153, 0.2);
+  margin-top: 8px;
+  font-size: 18px;
+  padding: 0.25em 0.5em;
+}
+select {
+  height: 42px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 130, 153, 0.2);
+  margin-top: 8px;
+  font-size: 18px;
+  padding: 0.25em 0.5em;
+}
+.button-container {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.cancel-text {
+  font-size: 12px;
+  color: rgba(0, 5, 51, 0.5);
+  cursor: pointer;
+}
+.form-overlay-hidden {
+  visibility: hidden;
+}
+.remove-item-button-visible {
+  visibility: visible;
+}
